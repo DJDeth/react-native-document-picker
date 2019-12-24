@@ -1,6 +1,6 @@
 declare module 'react-native-document-picker' {
   type UTI = 'public.png' | 'public.jpeg' | 'com.adobe.pdf' | 'org.openxmlformats.wordprocessingml.document' | 'org.openxmlformats.spreadsheetml.sheet' | 'org.openxmlformats.presentationml.presentation';
-  type MimeType = 'image/jpg' | 'image/jpeg' | 'image/png' | 'application/pdf', 'application/vnd.ms-excel', 'application/msword', 'application/vnd.ms-powerpoint';
+  type MimeType = 'image/jpg' | 'image/jpeg' | 'image/png' | 'application/pdf' | 'application/vnd.ms-excel' | 'application/msword' | 'application/vnd.ms-powerpoint';
   type Extension = '.jpeg' | '.jpg' | '.png' | '.txt' | '.pdf' | '.xls' | '.xlsx' | '.doc' | '.docx' | '.tiff' | '.ppt' | '.pptx';
 
   type DocumentType = {
