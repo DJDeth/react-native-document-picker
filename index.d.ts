@@ -1,7 +1,7 @@
 declare module 'react-native-document-picker' {
-  type UTI = 'public.png' | 'public.jpeg' | 'com.adobe.pdf';
-  type MimeType = 'image/jpg' | 'image/jpeg' | 'image/png' | 'application/pdf';
-  type Extension = '.jpeg' | '.jpg' | '.png' | '.txt' | '.pdf';
+  type UTI = 'public.png' | 'public.jpeg' | 'com.adobe.pdf' | 'org.openxmlformats.wordprocessingml.document' | 'org.openxmlformats.spreadsheetml.sheet' | 'org.openxmlformats.presentationml.presentation';
+  type MimeType = 'image/jpg' | 'image/jpeg' | 'image/png' | 'application/pdf', 'application/vnd.ms-excel', 'application/msword', 'application/vnd.ms-powerpoint';
+  type Extension = '.jpeg' | '.jpg' | '.png' | '.txt' | '.pdf' | '.xls' | '.xlsx' | '.doc' | '.docx' | '.tiff' | '.ppt' | '.pptx';
 
   type DocumentType = {
     android: MimeType | MimeType[]
@@ -13,26 +13,35 @@ declare module 'react-native-document-picker' {
     mimeTypes: {
       allFiles: '*/*',
       audio: 'audio/*',
+      doc: 'application/msword',
+      excel: 'application/vnd.ms-excel',
       images: 'image/*',
       plainText: 'text/plain',
       pdf: 'application/pdf',
-      video: 'video/*',
+      powerpoint: 'application/vnd.ms-powerpoint',
+      video: 'video/*', 
     },
     utis: {
       allFiles: 'public.content',
       audio: 'public.audio',
+      doc: 'org.openxmlformats.wordprocessingml.document',
+      excel: 'org.openxmlformats.spreadsheetml.sheet',
       images: 'public.image',
       plainText: 'public.plain-text',
       pdf: 'com.adobe.pdf',
+      powerpoint: 'org.openxmlformats.presentationml.presentation',
       video: 'public.movie',
     },
     extensions: {
       allFiles: '*',
       audio:
         '.3g2 .3gp .aac .adt .adts .aif .aifc .aiff .asf .au .m3u .m4a .m4b .mid .midi .mp2 .mp3 .mp4 .rmi .snd .wav .wax .wma',
-      images: '.jpeg .jpg .png',
+      doc: '.doc .docx',
+      excel: '.xls .xlsx',
+      images: '.jpeg .jpg .png, .tiff',
       plainText: '.txt',
       pdf: '.pdf',
+      powerpoint: '.ppt .pptx',
       video: '.mp4',
     },
   };
